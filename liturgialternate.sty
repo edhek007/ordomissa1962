@@ -1,0 +1,55 @@
+\ProvidesPackage{liturgialternate}
+
+\RequirePackage{color}
+\RequirePackage{lettrine}
+
+\renewcommand{\LettrineFontHook}{\color{red}}
+
+\newcommand{\leslettrine}[1]{%
+\lettrine{#1}{}
+}
+
+\newcommand{\lessontitle}[1]{%
+\begin{center}
+\vspace{-2em}
+\noindent\normalsize\textcolor{black}{#1}
+\end{center}
+}
+
+\newcommand{\psalmheading}[1]{%
+\begin{center}
+\vspace{-1em}
+\noindent\normalsize\textcolor{red}{#1}
+\vspace{-1em}
+\end{center}
+}
+
+\newcommand\instruct[1]{%
+\noindent\footnotesize\textcolor{red}{#1}\normalsize\\%
+}
+
+\newcommand\priestword{S. }
+\newcommand\serverword{M. }
+
+\newcommand\priest[1]{%
+\noindent\textcolor{red}{\priestword}{#1}\\%
+}
+
+\newcommand\server[1]{%
+\noindent\textcolor{red}{\serverword}{#1}\\%
+}
+
+\newcommand\priestchant[2]{
+\noindent\textcolor{red}{\priestword}  
+\begin{minipage}{#1}
+	{#2}
+\end{minipage}
+}
+
+\newcommand\serverchant[2]{
+\noindent\textcolor{red}{\serverword}  
+\begin{minipage}{#1}
+	{#2}
+\end{minipage}
+}
+
